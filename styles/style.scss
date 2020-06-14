@@ -1,0 +1,187 @@
+/* ------------------------------------------------------------------ VARIABLES ----------- */
+
+$montserrat: 'Montserrat', sans-serif;
+$lavender-color: rgb(132, 0, 255);
+$my-grey: #3d3d3d;
+
+/* ------------------------------------------------------------------ GLOBAL ----------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $montserrat;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: $lavender-color;
+  color: white;
+}
+
+/* ------------------------------------------------------------------ NAVBAR ----------- */
+
+nav {
+  background-color: white;
+  padding: 0rem 1rem !important;
+}
+
+.navbar-light .navbar-brand {
+  font-weight: bold;
+  font-size: 28px;
+  transition: all 300ms ease;
+  color: black;
+  &:focus {
+    color: black;
+  }
+  &:hover {
+    color: black;
+    transform: scale(1.1);
+  }
+}
+
+.navbar-light .navbar-nav .nav-link {
+  letter-spacing: 2px;
+  color: black;
+  text-transform: uppercase;
+  padding-left: 35px;
+  font-size: 14px;
+  transition: all 300ms ease;
+  &:active {
+    color: white;
+  }
+  &:focus {
+    color: black;
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.navbar-light .navbar-toggler {
+  outline: none;
+}
+
+/* --------------------------------------------------------------------------- HERO ----------- */
+
+#hero {
+  background-image: url(../../../images/hero.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  .text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    h1 {
+      font-weight: bold;
+      font-size: 60px;
+      letter-spacing: 20px;
+    }
+    p {
+      font-size: 20px;
+      padding: 25px;
+      background-color: rgba(255, 255, 255, 0.5);
+      color: black;
+      letter-spacing: 2px;
+      width: 100%;
+    }
+    a {
+      img {
+        animation: chevronAnimation 480ms alternate infinite;
+        max-width: 28px;
+        margin-top: 50px;
+      }
+    }
+  }
+}
+
+@keyframes chevronAnimation {
+  from {
+    transform: translateY(15px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width: 768px) {
+  #hero {
+    .text {
+      h1 {
+        font-size: 40px;
+        letter-spacing: 4px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------------------------------- ABOUT ----------- */
+
+#about {
+  padding-bottom: 40px;
+  padding-top: 40px;
+  h2 {
+    font-size: 50px;
+    text-transform: uppercase;
+  }
+  h3 {
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 50px;
+    &::first-letter {
+      color: $lavender-color;
+    }
+  }
+  p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  ul {
+    margin-left: 20px;
+    li {
+      margin-top: 10px;
+    }
+  }
+}
+
+/* ------------------------------------------------------------------ GALLERY ----------- */
+
+#gallery {
+  padding-bottom: 40px;
+  padding-top: 40px;
+  h2 {
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  .container {
+    img {
+      height: 600px;
+      object-fit: cover;
+      object-position: center;
+      border-bottom: 50px solid black;
+    }
+  }
+}
+
+/* ------------------------------------------------------------------ GALLERY ----------- */
+footer {
+  margin-bottom: 30px;
+}
